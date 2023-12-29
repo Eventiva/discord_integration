@@ -14,7 +14,7 @@
 #------------------------------------------------------------------------------
 
 [[ -n ${ZSH_VERSION-} ]] &&
-  GIT_SUBREPO_ROOT=$0 ||
+  GIT_SUBREPO_ROOT=${(%):-%x} ||
   GIT_SUBREPO_ROOT=$BASH_SOURCE
 
 [[ $GIT_SUBREPO_ROOT =~ ^/ ]] ||
